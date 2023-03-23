@@ -1,12 +1,15 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
+
+# Flask expects called html files to be in a file named templates.
+# The folder should be on the same level as the run.py file.
 
 
 @app.route("/")
 def index():
-    return "Hello World"
+    return render_template("index.html")
 
 # __main__ is the name of the default module of Python. We run this first,
 # it will be run directly.
