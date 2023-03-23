@@ -24,6 +24,11 @@ def contact():
     return render_template("contact.html")
 
 
+@app.route("/careers")
+def careers():
+    return render_template("careers.html")
+
+
 # __main__ is the name of the default module of Python. We run this first,
 # it will be run directly.
 # NEVER have debug=True in production deployments or while submitting

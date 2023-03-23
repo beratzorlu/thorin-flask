@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Flask</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <!-- We need to use the Jinja templating method 'url_for()' to allow the nav links to work. -->
+                <!-- Once Flask sees this method it calls the specific methods provided here and runs the relevant code. -->
+                <!-- Double curly braces is for containing expressions that output something onto the screen. -->
+                <a href="{{ url_for('index') }}">Home</a>
+            </li>
+            <li>
+                <a href="{{ url_for('about') }}">About</a>
+            </li>
+            <li>
+                <a href="{{ url_for('contact') }}">Contact</a>
+            </li>
+            <li>
+                <a href="{{ url_for('careers') }}">Careers</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- This allows for the injection of content from other pages using Flask -->
+    <!-- Curly braces and percentage is for statements that control the flow of the template like loops, if statements and block elements.-->
+    <!-- It is possible to name the block anything, not just 'content' -->
+    {% block content %}
+    {% endblock %}
+    <!-- ctrl+shift+K deletes an entire line -->
+</body>
+
+</html>
