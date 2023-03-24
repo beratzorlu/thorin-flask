@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
+
+
+{% for num in list_of_nums %}
+    <p>{{ num }}</p>
+{% endfor %}
+
+
 <!-- Double c.brackets are an expression that will display sth on the page. -->
 <h2>{{ page_title }}</h2>
 <p>
